@@ -1,7 +1,7 @@
 # backendproj
 > RESTful API based on Go, PostgreSQL and Docker
 
-### Docs (Sweagger:
+### Docs (Sweagger):
 ```
 https://localhost:8000/docs/index.html
 ```
