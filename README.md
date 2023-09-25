@@ -33,11 +33,18 @@ https://localhost:8000/docs/index.html
       sudo docker compose up -d app
       ```
    Without Docker:
-    ```
-    go run main.go
-    ```
-    and <br/>
     Set PostgreSQL in pgAdmin (see in env file (.env))
+    and <br/>
+    
+    ```
+    go build
+    
+    //for windows
+    backendproj.exe
+
+    //for linux
+    ./backendproj
+    ```
 
 ### Entities:
  - **User (example)**:
