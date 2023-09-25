@@ -1,7 +1,7 @@
 # backendproj
-> RESTful API base on Go, PostgreSQL and Docker
+> RESTful API based on Go, PostgreSQL and Docker
 
-### Docs:
+### Docs (Sweagger:
 ```
 https://localhost:8000/docs/index.html
 ```
@@ -36,8 +36,8 @@ https://localhost:8000/docs/index.html
     ```
     go run main.go
     ```
-    and
-    Set PostgreSQL in pgAdmin line in env file (.env)
+    and <br/>
+    Set PostgreSQL in pgAdmin (see in env file (.env))
 
 ### Entities:
  - **User (example)**:
@@ -45,7 +45,7 @@ https://localhost:8000/docs/index.html
 {
   "id": 906,
   "username": "Andrew",
-  "password": "$2a$14$kv/sGmTWIlNYocbZqd88GuRsrOtKrs9bBFMM7N7HRNZ.qPxF.b.GG",
+  "password": "$2a$14$kv/sGmTWIlNYocbZqd88GuRsrOtKrs9bBFMM7N7HRNZ.qPxF.b.GG", //bcrypt hash
   "created_at": "2023-09-24T17:13:42Z",
   "updated_at": "2023-09-27T11:10:23Z"
 }
@@ -61,4 +61,23 @@ https://localhost:8000/docs/index.html
 }
 ```
 
+### Requests
+- /user/{id} [get]
+  <br/>Get User by id
+- /user [post]
+  <br/>Create User from postForm: username, password
+- /user/{user_id} [delete]
+  <br/>Delete User and its bookings by user_id
+- /user/{id} [put]
+  <br/>Update User data (optional: username, password) by id (set new timestamp in update_at)
 
+- /booking [get]
+  <br/>Get all bookings ordered by id
+- /booking/{id} [get]
+  <br/>Get Booking by id (optional: set limit, page(required limit), offset(required limit) in params)
+- /booking [post]
+  <br/>Create User from postForm: user_id, start_time, end_time, comment(optional)
+- /booking/{id} [delete]
+  <br/>Delete Booking by id
+- /booking/{id} [put]
+  <br/>Update Booking data (optional: start_time, end_time, comments) by id
