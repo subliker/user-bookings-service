@@ -7,16 +7,37 @@ https://localhost:8000/docs/index.html
 ```
 
 ### Requirements:
+#### With Docker:
+ ![docker](https://badgen.net/static/docker/@latest/purple)<br/>
+ You can install Docker <a href="https://docs.docker.com/engine/install/">there</a>
 
-![golang](https://badgen.net/static/go/1.13/green?icon=github) ![postgresql](https://badgen.net/static/postgresql/@latest/) ![docker](https://badgen.net/static/docker/@latest/purple)
+#### Without Docker:
+ ![golang](https://badgen.net/static/go/1.13/green?icon=github) ![postgresql](https://badgen.net/static/postgresql/@latest/)<br/>
+ You can install Golang <a href="https://go.dev/doc/install">there</a><br/>
+ You can install PostgreSQL <a href="https://www.postgresql.org/download/">there</a>
 
 ### Installing:
-In main directory:
-```bash
-docker-compose build
-docker-compose up -d postgresdb
-docker-compose up -d app
-```
+1. Clone repository 
+2. In main directory:<br/>
+   With Docker:
+    for Windows users:
+      ```bash
+      docker-compose build
+      docker-compose up -d postgresdb
+      docker-compose up -d app
+      ```
+    for Linux users:
+      ```bash
+      sudo docker compose build
+      sudo docker compose up -d postgresdb
+      sudo docker compose up -d app
+      ```
+   Without Docker:
+    ```
+    go run main.go
+    ```
+    and
+    Set PostgreSQL in pgAdmin line in env file (.env)
 
 ### Entities:
  - **User (example)**:
