@@ -166,7 +166,7 @@ func (c *DataBase) GetBookings(limit, page, offset string) (BookingsData, httpCo
 
 		strQuery = fmt.Sprintf(` SELECT * FROM bookings ORDER BY id LIMIT %d`, limitI)
 	} else {
-		strQuery = " SELECT * FROM bookings"
+		strQuery = " SELECT * FROM bookings ORDER BY id"
 	}
 	rows, err := tx.Queryx(strQuery)
 	if err != nil {
