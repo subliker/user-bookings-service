@@ -1,4 +1,4 @@
-# backendproj
+# user-bookings-service
 > RESTful API based on Go, PostgreSQL and Docker
 
 ### Docs (Sweagger):
