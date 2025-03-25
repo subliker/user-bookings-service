@@ -12,7 +12,7 @@ https://localhost:8000/docs/index.html
  You can install Docker <a href="https://docs.docker.com/engine/install/">there</a>
 
 #### Without Docker:
- ![golang](https://badgen.net/static/go/1.13/green?icon=github) ![postgresql](https://badgen.net/static/postgresql/@latest/)<br/>
+ ![golang](https://badgen.net/static/go/1.21.3/green?icon=github) ![postgresql](https://badgen.net/static/postgresql/@latest/)<br/>
  You can install Golang <a href="https://go.dev/doc/install">there</a><br/>
  You can install PostgreSQL <a href="https://www.postgresql.org/download/">there</a>
 
